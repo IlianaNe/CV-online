@@ -1,0 +1,31 @@
+<div class="nombre">
+    <h1>Certificados</h1>
+</div>
+
+
+<ngb-carousel [interval]="12000" [showNavigationArrows]="true" class="carousel carousel-dark slide">
+    <ng-template ngbSlide *ngFor="let certificado of certificados">
+        <div class="picsum-img-wrapper carusel">
+            <img [src]="certificado.img" [alt]="certificado.name">
+        </div>
+    </ng-template>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+</ngb-carousel>
+
+
+
+
+<div class="certificates">
+    <div class="itemC" *ngFor="let item of certificados">
+
+        <h4 class="namename">{{item.name}}</h4>
+        <p class="escuela">{{item.location}}</p>
+    </div>
+</div>

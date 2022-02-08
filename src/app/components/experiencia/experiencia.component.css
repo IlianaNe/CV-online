@@ -1,0 +1,73 @@
+.nombre h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-size: 80px;
+    color: #232323;
+    letter-spacing: .4em;
+    text-align: center;
+}
+
+.nombre {
+    margin-bottom: 100px;
+}
+
+.education {
+    margin-top: 200px;
+    font-family: 'Newsreader', serif;
+    color: #232323;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+.school {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.year {
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.degree {
+    font-size: 30px;
+}
+
+.acti {
+    margin: 80px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 1280px) {
+    .nombre h1 {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 922px) {
+    .nombre h1 {
+        font-size: 40px;
+    }
+    .nombre {
+        margin-bottom: 50px;
+    }
+    .education {
+        margin-top: 100px;
+        height: 400px;
+    }
+    .school {
+        font-size: 20px;
+    }
+    .year {
+        font-size: 15px;
+    }
+    .degree {
+        font-size: 20px;
+    }
+    .acti {
+        font-size: 20px;
+    }
+}

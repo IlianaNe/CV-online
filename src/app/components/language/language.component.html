@@ -1,0 +1,17 @@
+<div class="nombre animate__animated animate__fadeInDown">
+    <h1>Languages</h1>
+</div>
+
+
+<div class="contenedor">
+    <img class="imgBG" src="/assets/images/languages/BG.png" alt="..">
+    <div class="idiomas">
+        <div class="idioma hvr-grow" *ngFor="let language of languages">
+            <h3>{{language.name}}</h3>
+            <img class="idiomasImagen" [src]="language.img" [alt]="language.name">
+            <p>{{language.level}}</p>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>

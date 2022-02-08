@@ -1,0 +1,11 @@
+<div class="nombre animate__animated animate__fadeInDown">
+    <h1>Soft Skills</h1>
+</div>
+
+
+<div class="skills">
+    <div class="cajita hvr-grow" *ngFor="let item of items">
+        <p class="name">{{item.name}}</p>
+        <img [src]="item.img" alt="..">
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="nombre animate__animated animate__fadeInDown">
+    <hr>
+    <h1>Hard Skills</h1>
+</div>
+
+
+<div class="programming">
+    <div class="name">
+        <h1>{{name}}</h1>
+    </div>
+    <div class="cajita hvr-grow" *ngFor="let item of images">
+        <img [src]="item.img" alt="..">
+    </div>
+</div>
+<br>
+<br>
+
+
+<app-programming-web></app-programming-web>
+
+<app-database></app-database>
+
+<app-frameworks></app-frameworks>
+
+<app-software></app-software>

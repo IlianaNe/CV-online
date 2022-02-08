@@ -1,0 +1,122 @@
+.nombre h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-size: 80px;
+    color: #232323;
+    letter-spacing: .4em;
+    text-align: center;
+    margin-left: 150px;
+}
+
+.education .contenedor {
+    font-family: 'Newsreader', serif;
+    background-color: #232323;
+    color: #fff;
+    width: 60%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+    border: 1px solid #afcde3;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.academica {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-size: 60px;
+    letter-spacing: .4em;
+    margin-right: 30px;
+    color: #fff;
+}
+
+.education .contenedor .institution .school {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.education .contenedor .institution .year {
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.education .contenedor .institution .degree {
+    font-size: 30px;
+}
+
+.education .contenedor .institution {
+    width: 65%;
+}
+
+hr {
+    height: 60px;
+    width: 5px;
+    border-width: 0;
+    color: #fff;
+    float: left;
+    margin-right: 30px;
+}
+
+.logo {
+    overflow: visible;
+    position: absolute;
+    z-index: 2;
+    width: 55%;
+    text-align: center;
+}
+
+img {
+    width: 12%;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1280px) {
+    .academica {
+        font-size: 40px;
+    }
+    .nombre h1 {
+        font-size: 60px;
+    }
+    .education .contenedor .institution .school {
+        font-size: 20px;
+    }
+    .education .contenedor .institution .year {
+        font-size: 15px;
+    }
+    .education .contenedor .institution .degree {
+        font-size: 20px;
+    }
+    .education .contenedor {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 922px) {
+    .education .contenedor {
+        height: 350px;
+    }
+    .academica {
+        font-size: 20px;
+    }
+    .nombre h1 {
+        font-size: 30px;
+    }
+    .education .contenedor .institution .school {
+        font-size: 15px;
+    }
+    .education .contenedor .institution .year {
+        font-size: 10px;
+    }
+    .education .contenedor .institution .degree {
+        font-size: 15px;
+    }
+    .logo {
+        width: 65%;
+    }
+}

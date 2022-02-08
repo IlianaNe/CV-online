@@ -1,0 +1,29 @@
+.animacion {
+    margin: auto;
+    width: 40%;
+}
+
+.contenedor {
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.caja {
+    color: #232323;
+    font-size: 90px;
+    text-align: center;
+    width: 15%;
+}
+
+@media screen and (max-width: 1600px) {
+    .animacion {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 922px) {
+    .animacion {
+        width: 70%;
+    }
+}

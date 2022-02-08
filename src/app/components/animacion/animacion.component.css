@@ -1,0 +1,16 @@
+.animacion {
+    margin: auto;
+    width: 40%;
+}
+
+@media screen and (max-width: 1400px) {
+    .animacion {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 922px) {
+    .animacion {
+        width: 80%;
+    }
+}

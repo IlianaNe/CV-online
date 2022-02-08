@@ -1,0 +1,70 @@
+.header {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.animacion {
+    height: 65%;
+}
+
+.animacion2 {
+    margin-top: -280px;
+}
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.certificate {
+    margin-top: 150px;
+}
+
+.experiencia {
+    margin-top: 150px;
+}
+
+.animacionYo {
+    margin-top: 150px;
+}
+
+.skills {
+    margin-top: 150px;
+}
+
+.rs {
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 1140px) {
+    .header {
+        height: 800px;
+    }
+    .animacion2 {
+        margin-top: -210px;
+    }
+}
+
+@media screen and (max-width: 922px) {
+    .certificate {
+        margin-top: 100px;
+    }
+    .experiencia {
+        margin-top: 100px;
+    }
+    .animacionYo {
+        margin-top: 100px;
+    }
+    .skills {
+        margin-top: 100px;
+    }
+    .rs {
+        margin-top: 100px;
+    }
+}

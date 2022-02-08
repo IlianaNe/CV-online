@@ -1,0 +1,98 @@
+.carusel {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+}
+
+ngb-carousel {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+}
+
+ngb-carousel {
+    width: inherit;
+    height: inherit;
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+.carousel-item {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    z-index: 20;
+}
+
+.carousel-control-next {
+    z-index: 20;
+}
+
+.carousel-indicators {
+    z-index: 20;
+}
+
+.nombre h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #232323;
+    letter-spacing: .2em;
+    text-align: center;
+}
+
+.certificates {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.itemC {
+    width: 40%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.fas {
+    float: left;
+}
+
+.namename {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #232323;
+}
+
+@media screen and (max-width: 922px) {
+    .nombre h1 {
+        font-size: 40px;
+    }
+    .carusel {
+        width: 60%;
+        margin: auto;
+    }
+    .namename {
+        font-size: 15px;
+    }
+}

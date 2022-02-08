@@ -1,0 +1,78 @@
+    .nombre h1 {
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        font-size: 80px;
+        color: #232323;
+        letter-spacing: .4em;
+        text-align: center;
+    }
+    
+    .nombre {
+        margin-bottom: 100px;
+    }
+    
+    .contenedor {
+        width: 35%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .imgBG {
+        width: 100%;
+    }
+    
+    .idiomasImagen {
+        width: 30%;
+    }
+    
+    .idiomas {
+        width: 50%;
+        height: 80%;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        background-color: rgba(2, 2, 24, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .idioma {
+        margin-top: 30px;
+    }
+    
+    p {
+        margin-top: 4px;
+    }
+    
+    @media screen and (max-width: 1600px) {
+        .nombre h1 {
+            font-size: 60px;
+        }
+        .contenedor {
+            width: 55%;
+        }
+        .idiomas {
+            height: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 922px) {
+        .nombre {
+            margin-bottom: -70px;
+        }
+        .nombre h1 {
+            font-size: 40px;
+        }
+        .contenedor {
+            width: 75%;
+        }
+        .idioma {
+            margin-top: 10px;
+        }
+    }
