@@ -4,8 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 
 
 const routes: Routes = [
-  { path: 'header', component: HeaderComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'header' }
+  { path: 'home', component: HeaderComponent },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({

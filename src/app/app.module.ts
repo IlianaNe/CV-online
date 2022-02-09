@@ -24,6 +24,7 @@ import { AnimacionComponent } from './components/animacion/animacion.component';
 import { SoftskillsComponent } from './components/softskills/softskills.component';
 import { RedesSocialesComponent } from './components/redes-sociales/redes-sociales.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -46,14 +47,15 @@ export function playerFactory() {
     AnimacionComponent,
     SoftskillsComponent,
     RedesSocialesComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     LottieCacheModule.forRoot(),
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory }),
+    BrowserAnimationsModule
   ],
   providers: [CertificatesService],
   bootstrap: [AppComponent]

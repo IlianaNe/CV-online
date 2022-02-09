@@ -17,7 +17,7 @@ export class AnimacionComponent implements OnInit {
   animationPresentation: AnimationOptions = {
     path: '/assets/animations/yo/yoCara.json',
     loop: false,
-    autoplay: true,
+    autoplay: true, 
   };
 
   animationCreated(animationItem: AnimationItem): void {
