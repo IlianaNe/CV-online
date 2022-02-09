@@ -1,57 +1,37 @@
-import { Component, ViewEncapsulation } from "@angular/core";
-import {
-  NavigationCancel,
-  NavigationEnd,
-  NavigationError,
-  NavigationStart,
-  Router
-} from "@angular/router";
-import { IsLoadingService } from "@service-work/is-loading";
-import { Observable } from "rxjs";
-import { filter } from "rxjs/operators";
+import { Component, AfterViewInit } from '@angular/core';
+import { 
+    Router, NavigationStart, NavigationCancel, NavigationEnd 
+} from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  
+export class AppComponent implements AfterViewInit  {
+
   title = 'curriculum';
-  isLoading: Observable<boolean> | undefined;
-
+  loading;
   constructor(
-    private isLoadingService: IsLoadingService,
     private router: Router
-  ) {}
-
-  ngOnInit() {
-    // Note, because `IsLoadingService#isLoading$()` returns
-    // a new observable each time it is called, it shouldn't
-    // be called directly inside a component template.
-    this.isLoading = this.isLoadingService.isLoading$();
-
+  ) {
+    this.loading = true;
+  }
+  ngAfterViewInit() {
     this.router.events
-      .pipe(
-        filter(
-          (event) =>
-            event instanceof NavigationStart ||
-            event instanceof NavigationEnd ||
-            event instanceof NavigationCancel ||
-            event instanceof NavigationError
-        )
-      )
       .subscribe((event) => {
-        // If it's the start of navigation, `add()` a loading indicator
         if (event instanceof NavigationStart) {
-          this.isLoadingService.add();
-          return;
+          this.loading = true;
+          console.log(this.loading);
         }
-
-        // Else navigation has ended, so `remove()` a loading indicator
-        this.isLoadingService.remove();
+        else if (
+          event instanceof NavigationEnd ||
+          event instanceof NavigationCancel
+        ) {
+          this.loading = false;
+          console.log(this.loading);
+        }
       });
   }
 }

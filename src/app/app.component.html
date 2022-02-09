@@ -1,6 +1,8 @@
-<mat-progress-bar *ngIf="isLoading | async" mode="indeterminate" color="warn" style="position: absolute; top: 0; z-index: 100;">
-</mat-progress-bar>
-
-
-<router-outlet>
-</router-outlet>
+<div class="app-layout">
+    <div [hidden]="!loading" class="loader">
+        <h2>Loading...</h2>
+    </div>
+    <div [hidden]="loading" class="router-output">
+        <router-outlet></router-outlet>
+    </div>
+</div>
