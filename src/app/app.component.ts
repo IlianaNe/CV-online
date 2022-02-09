@@ -1,36 +1,57 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from "@angular/core";
 import {
-  Router, NavigationStart, NavigationEnd,
-  NavigationCancel, NavigationError, Event
-} from '@angular/router';
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router
+} from "@angular/router";
+import { IsLoadingService } from "@service-work/is-loading";
+import { Observable } from "rxjs";
+import { filter } from "rxjs/operators";
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  showLoadingIndicator = true;
+  
   title = 'curriculum';
+  isLoading: Observable<boolean> | undefined;
 
-  constructor(private _router: Router) {
-    // Subscribe to the router events observable
-    this._router.events.subscribe((routerEvent: Event) => {
+  constructor(
+    private isLoadingService: IsLoadingService,
+    private router: Router
+  ) {}
 
-      // On NavigationStart, set showLoadingIndicator to ture
-      if (routerEvent instanceof NavigationStart) {
-        this.showLoadingIndicator = true;
-      }
+  ngOnInit() {
+    // Note, because `IsLoadingService#isLoading$()` returns
+    // a new observable each time it is called, it shouldn't
+    // be called directly inside a component template.
+    this.isLoading = this.isLoadingService.isLoading$();
 
-      // On NavigationEnd or NavigationError or NavigationCancel
-      // set showLoadingIndicator to false
-      if (routerEvent instanceof NavigationEnd ||
-        routerEvent instanceof NavigationError ||
-        routerEvent instanceof NavigationCancel) {
-        this.showLoadingIndicator = false;
-      }
+    this.router.events
+      .pipe(
+        filter(
+          (event) =>
+            event instanceof NavigationStart ||
+            event instanceof NavigationEnd ||
+            event instanceof NavigationCancel ||
+            event instanceof NavigationError
+        )
+      )
+      .subscribe((event) => {
+        // If it's the start of navigation, `add()` a loading indicator
+        if (event instanceof NavigationStart) {
+          this.isLoadingService.add();
+          return;
+        }
 
-    });
+        // Else navigation has ended, so `remove()` a loading indicator
+        this.isLoadingService.remove();
+      });
   }
 }
