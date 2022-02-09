@@ -7,7 +7,7 @@
         
         .parrafo {
             padding-left: 50px;
-            width: 30%;
+            width: 25%;
             position: absolute;
             z-index: 2;
             font-family: 'Libre Baskerville', serif;
@@ -29,13 +29,13 @@
             width: 100%;
         }
         
-        @media screen and (max-width: 1140px) {
+        @media screen and (max-width: 1393px) {
             .parrafo {
                 width: 35%;
             }
         }
         
-        @media screen and (max-width: 970px) {
+        @media screen and (max-width: 900px) {
             .parrafo {
                 width: 55%;
             }
