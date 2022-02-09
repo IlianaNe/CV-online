@@ -76,3 +76,19 @@
             margin-top: 10px;
         }
     }
+    
+    @media screen and (max-width: 550px) {
+        .nombre h1 {
+            font-size: 30px;
+        }
+        .contenedor {
+            width: 95%;
+        }
+        h3 {
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        .idioma {
+            margin-bottom: -40px;
+        }
+    }

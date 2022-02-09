@@ -96,3 +96,16 @@ ngb-carousel {
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .nombre h1 {
+        font-size: 40px;
+    }
+    .carusel {
+        width: 80%;
+        margin: auto;
+    }
+    .namename {
+        font-size: 15px;
+    }
+}

@@ -120,3 +120,40 @@ img {
         width: 65%;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .education .contenedor {
+        height: 300px;
+        width: 80%;
+        align-items: center;
+    }
+    .academica {
+        font-size: 25px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .nombre h1 {
+        font-size: 30px;
+    }
+    .education .contenedor .institution .school {
+        font-size: 15px;
+    }
+    .education .contenedor .institution .year {
+        font-size: 10px;
+    }
+    .education .contenedor .institution .degree {
+        font-size: 15px;
+    }
+    .logo {
+        width: 0%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .academica {
+        margin-top: 55px;
+    }
+    .nombre h1 {
+        margin-left: 0px;
+    }
+}

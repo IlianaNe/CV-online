@@ -81,3 +81,37 @@ img {
         padding-top: 30px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .nombre h1 {
+        font-size: 35px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .name h1 {
+        font-size: 30px;
+    }
+    .cajita {
+        margin: 1px;
+        width: 150px;
+    }
+    .programming {
+        height: 500px;
+    }
+    .name {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .name h1 {
+        font-size: 25px;
+    }
+    .cajita {
+        margin: 1px;
+        width: 130px;
+    }
+    .programming {
+        height: 500px;
+    }
+}

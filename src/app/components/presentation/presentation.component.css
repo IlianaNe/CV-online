@@ -1,45 +1,66 @@
-.presentation {
-    margin: auto;
-    background: #fff;
-    display: flex;
-    justify-content: end;
-}
-
-.parrafo {
-    width: 20%;
-    position: absolute;
-    z-index: 2;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 400;
-}
-
-.parrafo h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 600;
-    font-size: 50px;
-    color: #232323;
-    letter-spacing: .4em;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.animacion {
-    width: 100%;
-}
-
-@media screen and (max-width: 1280px) {
-    .parrafo h1 {
-        font-size: 30px;
-    }
-    .parrafo {
-        font-size: 15px;
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 922px) {
-    .parrafo {
-        width: 45%;
-        margin-right: 50px;
-    }
-}
+        .presentation {
+            margin: auto;
+            background: #fff;
+            display: flex;
+            justify-content: end;
+        }
+        
+        .parrafo {
+            padding-left: 50px;
+            width: 30%;
+            position: absolute;
+            z-index: 2;
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 400;
+            font-size: 15px;
+        }
+        
+        .parrafo h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 600;
+            font-size: 30px;
+            color: #232323;
+            letter-spacing: .4em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .animacion {
+            width: 100%;
+        }
+        
+        @media screen and (max-width: 1140px) {
+            .parrafo {
+                width: 35%;
+            }
+        }
+        
+        @media screen and (max-width: 970px) {
+            .parrafo {
+                width: 55%;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            .parrafo {
+                position: relative;
+                width: 80%;
+                text-align: center;
+                padding-left: 0px;
+                margin-bottom: 50px;
+            }
+            .presentation {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .animacion {
+                width: 80%;
+                margin-left: 100px;
+            }
+        }
+        
+        @media screen and (max-width: 440px) {
+            .animacion {
+                width: 70%;
+            }
+        }

@@ -26,4 +26,23 @@
     .animacion {
         width: 70%;
     }
+    .contenedor {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .animacion {
+        width: 100%;
+    }
+    .caja {
+        width: 35%;
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .caja {
+        font-size: 50px;
+    }
 }
