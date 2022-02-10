@@ -17,7 +17,7 @@ export class AppComponent {
         setTimeout( () => {
           console.log("hola");
           this.loading = true;
-        }, 5000);
+        }, 4000);
         console.log(this.loading)
       } else if (event instanceof NavigationEnd) {
         this.loading = false;

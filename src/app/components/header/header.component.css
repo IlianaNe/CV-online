@@ -8,7 +8,8 @@
 }
 
 .animacion {
-    height: 65%;
+    height: 80%;
+    margin-top: -180px;
 }
 
 .animacion2 {
@@ -44,10 +45,14 @@
 
 @media screen and (max-width: 1140px) {
     .header {
-        height: 800px;
+        height: 900px;
+    }
+    .animacion {
+        height: 80%;
+        margin-top: -180px;
     }
     .animacion2 {
-        margin-top: -210px;
+        margin-top: -280px;
     }
 }
 
@@ -74,10 +79,25 @@
         height: 850px;
     }
     .animacion {
+        width: 100%;
         height: 100%;
         margin-top: -280px;
     }
     .animacion2 {
         margin-top: -280px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .animacion {
+        width: 100%;
+        height: 100%;
+        margin-top: -380px;
+    }
+    .animacion2 {
+        margin-top: -280px;
+    }
+    .presentation {
+        margin-top: 10px;
     }
 }
