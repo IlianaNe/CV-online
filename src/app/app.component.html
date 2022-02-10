@@ -1,5 +1,4 @@
-<router-outlet></router-outlet>
-
-<div class="loading" *ngIf="loading">
-    <i class="fas fa-spin fa-spinner fa-5x"></i>
+<div class="loading" *ngIf="!loading">
+    <ng-lottie class="animation" [options]="animationLogo" (animationCreated)="animationCreated($event)"></ng-lottie>
 </div>
+<router-outlet *ngIf="loading"></router-outlet>
