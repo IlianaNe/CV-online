@@ -14,23 +14,23 @@ export class SoftskillsComponent implements OnInit {
 
   items: any[] = [
     {
-      name: "Compañerismo",
+      name: "Friendliness",
       img: "/assets/images/softskills/compa.png",
     },
     {
-      name: "Liderazgo",
+      name: "Leadership",
       img: "/assets/images/softskills/liderazgo.png",
     },
     {
-      name: "Solución",
+      name: "Initiative",
       img: "/assets/images/softskills/solucion.png",
     },
     {
-      name: "Creatividad",
+      name: "Creativity",
       img: "/assets/images/softskills/creatividad.png",
     },
     {
-      name: "Análisis",
+      name: "Analytical",
       img: "/assets/images/softskills/analisis.png",
     },
   ];
