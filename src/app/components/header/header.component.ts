@@ -28,7 +28,6 @@ export class HeaderComponent implements OnInit {
 
 
   animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
   }
 
 }

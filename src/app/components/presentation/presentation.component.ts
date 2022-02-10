@@ -21,7 +21,6 @@ export class PresentationComponent implements OnInit {
   };
 
   animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
   }
 
 }

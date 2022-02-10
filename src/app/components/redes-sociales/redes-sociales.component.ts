@@ -21,6 +21,5 @@ export class RedesSocialesComponent implements OnInit {
   };
 
   animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
   }
 }

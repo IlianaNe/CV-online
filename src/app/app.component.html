@@ -1,8 +1,5 @@
-<div class="app-layout">
-    <div [hidden]="!loading" class="loader">
-        <h2>Loading...</h2>
-    </div>
-    <div [hidden]="loading" class="router-output">
-        <router-outlet></router-outlet>
-    </div>
+<router-outlet></router-outlet>
+
+<div class="loading" *ngIf="loading">
+    <i class="fas fa-spin fa-spinner fa-5x"></i>
 </div>
