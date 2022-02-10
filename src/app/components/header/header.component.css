@@ -69,15 +69,18 @@
     }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 540px) {
     .header {
         height: 850px;
     }
     .animacion {
         height: 100%;
-        margin-top: -280px;
+        margin-top: -580px;
     }
     .animacion2 {
         margin-top: -280px;
+    }
+    .presentation {
+        margin-top: -100px;
     }
 }
