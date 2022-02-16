@@ -1,25 +1,33 @@
-import { Component, OnInit } from '@angular/core';
-import { AnimationItem } from 'lottie-web';
-import { AnimationOptions } from 'ngx-lottie';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { create } from '@lottiefiles/lottie-interactivity';
 
 @Component({
   selector: 'app-redes-sociales',
   templateUrl: './redes-sociales.component.html',
   styleUrls: ['./redes-sociales.component.css']
 })
-export class RedesSocialesComponent implements OnInit {
+export class RedesSocialesComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    const player = document.getElementById('RS');
+    player!.addEventListener('load', () => {
+      create({
+        mode: "cursor",
+        player: "#RS",
+        actions: [
+          {
+            position: { x: [0, 1], y: [0, 1] },
+            type: 'seek',
+            frames: [0, 100],
+          },
+        ],
+      })
+    })
   }
 
-  animationPresentation: AnimationOptions = {
-    path: '/assets/animations/yo/yoWebRS.json',
-    loop: false,
-    autoplay: true,
-  };
+  ngOnInit(): void {
 
-  animationCreated(animationItem: AnimationItem): void {
   }
 }

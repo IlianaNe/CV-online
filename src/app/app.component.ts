@@ -15,13 +15,11 @@ export class AppComponent {
     router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         setTimeout( () => {
-          console.log("hola");
+          console.log("hola persona curiosa");
           this.loading = true;
-        }, 4000);
-        console.log(this.loading)
+        }, 4500);
       } else if (event instanceof NavigationEnd) {
         this.loading = false;
-        console.log(this.loading)
       }
     })
   }

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AnimationItem } from 'lottie-web';
-import { AnimationOptions } from 'ngx-lottie';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { create } from '@lottiefiles/lottie-interactivity';
 
 @Component({
   selector: 'app-database',
@@ -11,16 +10,22 @@ export class DatabaseComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    const player = document.getElementById('DataB');
+    player!.addEventListener('load', () => {
+      create({
+        mode: "cursor",
+        player: "#DataB",
+        actions: [{
+          type: "hover",
+          forceFlag: false
+        }]
+      })
+    })
   }
 
-  animationDB: AnimationOptions = {
-    path: '/assets/animations/database.json',
-    loop: true,
-    autoplay: true,
-  };
+  ngOnInit(): void {
 
-  animationCreated(animationItem: AnimationItem): void {
   }
 
 }

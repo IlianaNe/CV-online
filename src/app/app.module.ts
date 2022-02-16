@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { LottieModule , LottieCacheModule  } from 'ngx-lottie';
 import { AppRoutingModule } from './app-routing.module';
-import player from 'lottie-web';
 
 import { CertificatesService } from './services/certificates.service';
 
@@ -26,6 +25,7 @@ import { RedesSocialesComponent } from './components/redes-sociales/redes-social
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ObserveVisibilityDirectiveDirective } from './directiva/observe-visibility-directive.directive';
 
 
 export function playerFactory() {
@@ -49,7 +49,8 @@ export function playerFactory() {
     AnimacionComponent,
     SoftskillsComponent,
     RedesSocialesComponent,
-    FooterComponent, 
+    FooterComponent,
+    ObserveVisibilityDirectiveDirective, 
   ],
   imports: [
     BrowserModule,
@@ -61,6 +62,7 @@ export function playerFactory() {
     BrowserAnimationsModule
   ],
   providers: [CertificatesService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

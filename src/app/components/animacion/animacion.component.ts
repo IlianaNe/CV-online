@@ -1,26 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { AnimationItem } from 'lottie-web';
-import { AnimationOptions } from 'ngx-lottie';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { create } from '@lottiefiles/lottie-interactivity';
 
 @Component({
   selector: 'app-animacion',
   templateUrl: './animacion.component.html',
   styleUrls: ['./animacion.component.css']
 })
-export class AnimacionComponent implements OnInit {
+export class AnimacionComponent implements OnInit, AfterViewInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    const player = document.getElementById('animatronico');
+    player!.addEventListener('load', () => {
+      create({
+        mode: "scroll",
+        player: "#animatronico",
+        actions: [
+          {
+          visibility: [0.50, 1.0],
+          type: "play"
+        }]
+      })
+    })
   }
 
-  animationPresentation: AnimationOptions = {
-    path: '/assets/animations/yo/yoCara.json',
-    loop: false,
-    autoplay: true, 
-  };
+  ngOnInit(): void {
 
-  animationCreated(animationItem: AnimationItem): void {
   }
 
 }
